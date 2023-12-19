@@ -1,3 +1,5 @@
+// Used Chatgpt for last 2 functions: shareOnFacebook and shareOnTwitter
+// Reference: https://stackoverflow.com/questions/41928803/how-to-parse-json-in-kotlin
 package com.example.StickToMyWish
 
 import android.app.AlertDialog
@@ -30,6 +32,7 @@ import java.time.format.DateTimeFormatter
 import java.time.temporal.ChronoUnit
 import java.util.UUID
 
+// MainActivity2 extends BaseActivity and handles the detailed view of projects including sharing and settings.
 class MainActivity2 : BaseActivity() {
     private var title: TextView? = null
     private var arrow_left: ImageView? = null
@@ -105,7 +108,7 @@ class MainActivity2 : BaseActivity() {
         }
 
     }
-
+    // Initializes UI components and sets up click listeners and view configurations.
     private fun initView() {
         between = findViewById(R.id.between)
         detail_content = findViewById(R.id.detail_content)
@@ -120,6 +123,7 @@ class MainActivity2 : BaseActivity() {
         setting = findViewById(R.id.setting)
         share = findViewById(R.id.share)
 
+        // Handles share button click, showing options to share on different social platforms.
         share!!.setOnClickListener {
             val items = arrayListOf(
                 BasicGridItem(R.drawable.facebook, "facebook"),
@@ -134,6 +138,7 @@ class MainActivity2 : BaseActivity() {
             }
         }
 
+        // Navigates to settings activity (MainActivity3) when clicked.
         setting!!.setOnClickListener {
             var intent = Intent(this, MainActivity3::class.java)
             startActivity(intent)
@@ -152,6 +157,7 @@ class MainActivity2 : BaseActivity() {
             day.text = dayList[i]
             month.text = monDisplayList[i]
         }
+        // Inserts a new record for the project and updates the display.
         shapeableImageView!!.setOnClickListener {
             lifecycleScope.launch(Dispatchers.IO) {
                 val record = Record(
@@ -168,6 +174,7 @@ class MainActivity2 : BaseActivity() {
         }
     }
 
+    // Retrieves and displays record data for the current project.
     private fun getRecordData(project: Project) {
         lifecycleScope.launch(Dispatchers.IO) {
             records = MyDataBase.instance!!.recordDao().getRecordList(project.id);
@@ -257,6 +264,7 @@ class MainActivity2 : BaseActivity() {
         setting!!.setTextColor(displayColor)
     }
 
+    //parse json file and display on the screen
     private fun fetchAndDisplayQuote() {
         val quoteFetcher = QuoteFetcher()
         quoteFetcher.fetchQuote { result ->
@@ -287,6 +295,7 @@ class MainActivity2 : BaseActivity() {
         }
     }
 
+    //share on facebook option
     private fun shareOnFacebook() {
         val shareIntent = Intent(Intent.ACTION_SEND)
         shareIntent.type = "text/plain"

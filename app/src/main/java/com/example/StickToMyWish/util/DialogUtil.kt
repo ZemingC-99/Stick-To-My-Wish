@@ -12,6 +12,9 @@ import com.afollestad.materialdialogs.lifecycle.lifecycleOwner
 
 class DialogUtil {
 
+    // Creates and displays a bottom sheet grid dialog within the provided context.
+    // Takes a list of BasicGridItem for the grid and a GridItemListener for handling item selections.
+    // Returns the created MaterialDialog instance.
     fun showBottomGridDialog(
         context: ComponentActivity,
         list: List<BasicGridItem>,

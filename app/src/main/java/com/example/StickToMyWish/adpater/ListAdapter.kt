@@ -10,6 +10,7 @@ import com.example.StickToMyWish.MyApplication.Companion.projectIndex
 import com.example.StickToMyWish.R
 import com.example.StickToMyWish.entity.Project
 
+// Adapter class for RecyclerView to display a list of projects.
 class ListAdapter : RecyclerView.Adapter<ListAdapter.ListViewHolder>() {
 
     var projectList: List<Project>? = ArrayList()
@@ -27,6 +28,7 @@ class ListAdapter : RecyclerView.Adapter<ListAdapter.ListViewHolder>() {
         holder.content.text = projectList!![position].content
         holder.day.text = "(${projectList!![position].start}) — (${projectList!![position].end})"
 
+        // Updates the global project list and index, then triggers the item click listener.
         holder.itemView.setOnClickListener {
             MyApplication.projectList = projectList as List<Project>
             projectIndex = position
@@ -44,6 +46,7 @@ class ListAdapter : RecyclerView.Adapter<ListAdapter.ListViewHolder>() {
         var content: TextView
         var day: TextView
 
+        // Initialize the TextViews for tab, title, content, and day in the list item.
         init {
             tab = itemView.findViewById(R.id.item_list_tab)
             title = itemView.findViewById(R.id.item_list_title)

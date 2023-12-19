@@ -1,3 +1,4 @@
+// Reference: https://developer.android.com/develop/background-work/services/alarms/schedule
 package com.example.StickToMyWish
 
 import android.Manifest
@@ -13,7 +14,7 @@ import androidx.core.app.ActivityCompat
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 
-
+// Activity class dedicated to setting up and triggering an alarm notification.
 class AlarmActivity : Activity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,9 +28,11 @@ class AlarmActivity : Activity() {
             ActivityCompat.requestPermissions(this, perms, 0)
             return
         }
+        // Setting up an intent to open MainActivity2 when the notification is clicked.
         val intent = Intent(this, MainActivity2::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-        val pendingIntent = PendingIntent.getActivity(this, 0, intent, 0)
+        // Creating a PendingIntent to handle the click event on the notification.
+        val pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_IMMUTABLE)
         val channelId = createNotificationChannel(
             "my_channel_ID", "my_channel_NAME", NotificationManager.IMPORTANCE_HIGH
         )
@@ -42,6 +45,8 @@ class AlarmActivity : Activity() {
         notificationManager.notify(100, notification.build())
     }
 
+    // Creates a notification channel for Android O and above, returns the channel ID.
+    // Necessary for delivering notifications on newer Android versions.
     private fun createNotificationChannel(
         channelID: String, channelNAME: String, level: Int
     ): String? {

@@ -16,17 +16,18 @@ import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import java.util.Calendar
 
-
+// BroadcastReceiver class designed to handle alarm triggers and send notifications.
 class AlarmReceiver : BroadcastReceiver() {
 
     lateinit var context: Context;
 
     override fun onReceive(context: Context, intent: Intent?) {
         this.context = context
-
+        // Configuring an Intent to launch MainActivity2 when the notification is clicked.
         val intent1 = Intent(context, MainActivity2::class.java)
         intent1.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-        val pendingIntent = PendingIntent.getActivity(context, 0, intent1, 0)
+        val pendingIntent = PendingIntent.getActivity(context, 0, intent1,
+            PendingIntent.FLAG_IMMUTABLE)
         val channelId = createNotificationChannel(
             "my_channel_ID", "my_channel_NAME", NotificationManager.IMPORTANCE_HIGH
         )
@@ -67,6 +68,7 @@ class AlarmReceiver : BroadcastReceiver() {
         }
     }
 
+    // Schedules the alarm to trigger at the specified time using the AlarmManager.
     private fun addAlarm(time: Int) {
         val alarmManager: AlarmManager;
         alarmManager = this.context.getSystemService(Context.ALARM_SERVICE) as AlarmManager;
@@ -78,7 +80,8 @@ class AlarmReceiver : BroadcastReceiver() {
         c.set(Calendar.HOUR_OF_DAY, hour)
         c.set(Calendar.MINUTE, minute)
         val intent = Intent(this.context, AlarmReceiver::class.java)
-        val pendingIntent = PendingIntent.getBroadcast(this.context, 0X102, intent, 0)
+        val pendingIntent = PendingIntent.getBroadcast(this.context, 0X102, intent,
+            PendingIntent.FLAG_IMMUTABLE)
         alarmManager.set(
             AlarmManager.RTC_WAKEUP, c.getTimeInMillis() - 1000 * 60 + time, pendingIntent
         )

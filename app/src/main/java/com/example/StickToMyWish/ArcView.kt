@@ -1,3 +1,6 @@
+//Reference: https://www.youtube.com/watch?v=3QfgFHVPnxI
+// https://www.jianshu.com/p/a5bb8c9f2596
+
 package com.example.StickToMyWish
 
 import android.animation.ValueAnimator

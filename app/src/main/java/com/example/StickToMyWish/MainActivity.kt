@@ -31,7 +31,7 @@ import java.util.UUID
 import java.util.function.Consumer
 import kotlin.streams.toList
 
-
+// MainActivity class that extends BaseActivity to handle the main user interface, including tab and project management.
 class MainActivity : BaseActivity() {
 
     private val TAG = "MainActivity"
@@ -54,6 +54,7 @@ class MainActivity : BaseActivity() {
             BasicGridItem(R.drawable.project, "Add project"),
         )
 
+        // Initializes and configures the horizontal RecyclerView for displaying tabs.
         binding.mainRecyclerTab.layoutManager =
             LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         binding.mainRecyclerTab.adapter = tabAdapter
@@ -68,6 +69,7 @@ class MainActivity : BaseActivity() {
                 listAdapter.notifyDataSetChanged()
             }
         }
+        // Initializes and configures the vertical RecyclerView for displaying projects.
         binding.mainRecyclerList.layoutManager =
             LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         listAdapter.itemClickListener = View.OnClickListener {
@@ -78,6 +80,7 @@ class MainActivity : BaseActivity() {
 
         flashData()
 
+        // Configures the 'more' image to open a bottom grid dialog for adding new tabs or projects.
         titleBinding.imageMore.visibility = View.VISIBLE
         titleBinding.imageMore.setOnClickListener {
             DialogUtil().showBottomGridDialog(this, items) { dialog, index, item ->
@@ -228,6 +231,7 @@ class MainActivity : BaseActivity() {
         binding.view7.setBackgroundColor(backgroundColor)
     }
 
+    // Refreshes the data in both tab and project adapters.
     private fun flashData() {
         lifecycleScope.launch(Dispatchers.IO) {
             tabAdapter.tabList = MyDataBase.instance!!.tabDao().getTabList()

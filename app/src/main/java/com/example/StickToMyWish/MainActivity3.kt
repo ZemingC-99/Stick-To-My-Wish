@@ -1,3 +1,4 @@
+//Reference: https://stackoverflow.com/questions/1332269/how-to-set-mobile-system-time-and-date-in-android
 package com.example.StickToMyWish
 
 import android.app.AlarmManager
@@ -35,6 +36,7 @@ class MainActivity3 : BaseActivity() {
     private lateinit var binding: ActivityMain3Binding
     private lateinit var titleBinding: LayoutTitleBinding
 
+    // Initialize all the layout and onClick listener for the app
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -107,6 +109,7 @@ class MainActivity3 : BaseActivity() {
 
     }
 
+    //Select the frequency of notification
     private fun selectNotificationFrequency(frequency: String) {
         binding.day.setBackgroundColor(Color.WHITE)
         binding.hour.setBackgroundColor(Color.WHITE)
@@ -125,6 +128,8 @@ class MainActivity3 : BaseActivity() {
 
     }
 
+    //choose in setting page for sharing default
+    //not in used
     private fun selectShareDefault(shareRoad: String?) {
         var value: String? = shareRoad
         binding.ins.setBackgroundColor(Color.WHITE)
@@ -148,6 +153,7 @@ class MainActivity3 : BaseActivity() {
 
     }
 
+    //Set clock and calendar view when needed
     fun setClock(view: View?) {
         val alarmManager: AlarmManager;
         alarmManager = getSystemService(Context.ALARM_SERVICE) as AlarmManager;
@@ -176,6 +182,8 @@ class MainActivity3 : BaseActivity() {
         timePickerDialog.show()
     }
 
+    // Design some color for dark mode
+    // Assign them to each components
     private fun changeDarkMode(open: Boolean) {
 
         val backgroundColor: Int =
