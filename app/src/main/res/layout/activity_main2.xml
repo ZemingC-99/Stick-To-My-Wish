@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/view8"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity2">
+
+    <include layout="@layout/layout_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/detail_data_layout1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/detail_date_mon1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:tag="month"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/detail_date_day1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="day"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/detail_date_image1"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="6dp"
+                android:scaleType="fitXY"
+                android:tag="image" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/detail_data_layout2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/detail_date_mon2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:tag="month"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/detail_date_day2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="day"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/detail_date_image2"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="6dp"
+                android:scaleType="fitXY"
+                android:tag="image" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/detail_data_layout3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/detail_date_mon3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:tag="month"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/detail_date_day3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="day"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/detail_date_image3"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="6dp"
+                android:scaleType="fitXY"
+                android:tag="image" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/detail_data_layout4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/detail_date_mon4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:tag="month"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/detail_date_day4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="day"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/detail_date_image4"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="6dp"
+                android:scaleType="fitXY"
+                android:tag="image" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/detail_data_layout5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/detail_date_mon5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:tag="month"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/detail_date_day5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="day"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/detail_date_image5"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="6dp"
+                android:scaleType="fitXY"
+                android:tag="image" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/detail_data_layout6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/detail_date_mon6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:tag="month"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/detail_date_day6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="day"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/detail_date_image6"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="6dp"
+                android:scaleType="fitXY"
+                android:tag="image" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/detail_data_layout7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/detail_date_mon7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:tag="month"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/detail_date_day7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="day"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/detail_date_image7"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="6dp"
+                android:scaleType="fitXY"
+                android:tag="image" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="60dp">
+
+        <com.example.StickToMyWish.ArcView
+            android:id="@+id/detail_content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:shapeAppearance="@style/CircleStyle" />
+
+        <TextView
+            android:id="@+id/detail_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/between"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="36dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FFEB3B"
+            android:gravity="center"
+            android:text="Goals"
+            android:textSize="28sp" />
+
+        <TextView
+            android:id="@+id/share"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Share"
+            android:textSize="28sp" />
+
+        <TextView
+            android:id="@+id/setting"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Setting"
+            android:textSize="28sp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
