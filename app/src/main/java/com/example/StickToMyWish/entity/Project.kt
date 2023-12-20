@@ -1,3 +1,4 @@
+//reference: https://developer.android.com/reference/kotlin/androidx/room/Entity
 package com.example.StickToMyWish.entity
 
 import androidx.room.ColumnInfo
